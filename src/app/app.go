@@ -7,8 +7,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 
-	"github.com/falconry9527/EasySwapBackend/src/config"
-	"github.com/falconry9527/EasySwapBackend/src/service/svc"
+	"EasySwapBackend/src/config"
+	"EasySwapBackend/src/service/svc"
 )
 
 type Platform struct {

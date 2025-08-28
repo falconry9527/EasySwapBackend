@@ -11,7 +11,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
 
-	"github.com/falconry9527/EasySwapBackend/src/types/v1"
+	"EasySwapBackend/src/types/v1"
 )
 
 const MaxBatchReadCollections = 500

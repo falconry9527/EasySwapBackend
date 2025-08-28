@@ -1,4 +1,4 @@
-module github.com/falconry9527/EasySwapBackend
+module EasySwapBackend
 
 go 1.21
 

@@ -6,9 +6,9 @@ import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 
-	"github.com/falconry9527/EasySwapBackend/src/api/middleware"
+	"EasySwapBackend/src/api/middleware"
 
-	"github.com/falconry9527/EasySwapBackend/src/service/svc"
+	"EasySwapBackend/src/service/svc"
 )
 
 func NewRouter(svcCtx *svc.ServerCtx) *gin.Engine {

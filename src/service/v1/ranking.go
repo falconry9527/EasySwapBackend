@@ -12,9 +12,9 @@ import (
 	"github.com/shopspring/decimal"
 	"go.uber.org/zap"
 
-	"github.com/falconry9527/EasySwapBackend/src/dao"
-	"github.com/falconry9527/EasySwapBackend/src/service/svc"
-	"github.com/falconry9527/EasySwapBackend/src/types/v1"
+	"EasySwapBackend/src/dao"
+	"EasySwapBackend/src/service/svc"
+	"EasySwapBackend/src/types/v1"
 )
 
 const MinuteSeconds = 60

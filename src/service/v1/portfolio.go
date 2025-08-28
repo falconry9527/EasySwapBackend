@@ -11,9 +11,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
 
-	"github.com/falconry9527/EasySwapBackend/src/dao"
-	"github.com/falconry9527/EasySwapBackend/src/service/svc"
-	"github.com/falconry9527/EasySwapBackend/src/types/v1"
+	"EasySwapBackend/src/dao"
+	"EasySwapBackend/src/service/svc"
+	"EasySwapBackend/src/types/v1"
 )
 
 const BidTypeOffset = 3

@@ -13,8 +13,8 @@ import (
 	"github.com/zeromicro/go-zero/core/stores/redis"
 	"gorm.io/gorm"
 
-	"github.com/falconry9527/EasySwapBackend/src/config"
-	"github.com/falconry9527/EasySwapBackend/src/dao"
+	"EasySwapBackend/src/config"
+	"EasySwapBackend/src/dao"
 )
 
 type ServerCtx struct {

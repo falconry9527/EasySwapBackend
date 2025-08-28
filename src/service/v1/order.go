@@ -7,8 +7,8 @@ import (
 	"github.com/falconry9527/EasySwapBase/stores/gdb/orderbookmodel/multi"
 	"github.com/pkg/errors"
 
-	"github.com/falconry9527/EasySwapBackend/src/service/svc"
-	"github.com/falconry9527/EasySwapBackend/src/types/v1"
+	"EasySwapBackend/src/service/svc"
+	"EasySwapBackend/src/types/v1"
 )
 
 // GetOrderInfos 获取订单信息

@@ -11,9 +11,9 @@ import (
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 
-	"github.com/falconry9527/EasySwapBackend/src/service/svc"
-	"github.com/falconry9527/EasySwapBackend/src/service/v1"
-	"github.com/falconry9527/EasySwapBackend/src/types/v1"
+	"EasySwapBackend/src/service/svc"
+	"EasySwapBackend/src/service/v1"
+	"EasySwapBackend/src/types/v1"
 )
 
 // TopRankingHandler 处理获取排名前列的NFT集合的请求

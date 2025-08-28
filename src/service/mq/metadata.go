@@ -11,7 +11,7 @@ import (
 	"github.com/pkg/errors"
 	"go.uber.org/zap"
 
-	"github.com/falconry9527/EasySwapBackend/src/types/v1"
+	"EasySwapBackend/src/types/v1"
 )
 
 const CacheRefreshSingleItemMetadataKey = "cache:%s:%s:item:refresh:metadata"

@@ -15,10 +15,10 @@ import (
 	"github.com/shopspring/decimal"
 	"go.uber.org/zap"
 
-	"github.com/falconry9527/EasySwapBackend/src/dao"
-	"github.com/falconry9527/EasySwapBackend/src/service/mq"
-	"github.com/falconry9527/EasySwapBackend/src/service/svc"
-	"github.com/falconry9527/EasySwapBackend/src/types/v1"
+	"EasySwapBackend/src/dao"
+	"EasySwapBackend/src/service/mq"
+	"EasySwapBackend/src/service/svc"
+	"EasySwapBackend/src/types/v1"
 )
 
 func GetBids(ctx context.Context, svcCtx *svc.ServerCtx, chain string, collectionAddr string, page, pageSize int) (*types.CollectionBidsResp, error) {

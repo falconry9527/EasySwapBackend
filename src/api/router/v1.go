@@ -3,9 +3,9 @@ package router
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/falconry9527/EasySwapBackend/src/api/middleware"
-	v1 "github.com/falconry9527/EasySwapBackend/src/api/v1"
-	"github.com/falconry9527/EasySwapBackend/src/service/svc"
+	"EasySwapBackend/src/api/middleware"
+	v1 "EasySwapBackend/src/api/v1"
+	"EasySwapBackend/src/service/svc"
 )
 
 func loadV1(r *gin.Engine, svcCtx *svc.ServerCtx) {

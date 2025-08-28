@@ -1,14 +1,15 @@
 package v1
 
 import (
-	"github.com/falconry9527/EasySwapBackend/src/service/svc"
-	"github.com/falconry9527/EasySwapBackend/src/service/v1"
+	"EasySwapBackend/src/service/svc"
+	"EasySwapBackend/src/service/v1"
+
 	"github.com/falconry9527/EasySwapBase/errcode"
 	"github.com/falconry9527/EasySwapBase/kit/validator"
 	"github.com/falconry9527/EasySwapBase/xhttp"
 	"github.com/gin-gonic/gin"
 
-	"github.com/falconry9527/EasySwapBackend/src/types/v1"
+	"EasySwapBackend/src/types/v1"
 )
 
 func UserLoginHandler(svcCtx *svc.ServerCtx) gin.HandlerFunc {

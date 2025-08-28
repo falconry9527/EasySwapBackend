@@ -11,9 +11,9 @@ import (
 	"github.com/falconry9527/EasySwapBase/logger/xzap"
 	"github.com/falconry9527/EasySwapBase/xhttp"
 
-	"github.com/falconry9527/EasySwapBackend/src/service/svc"
-	"github.com/falconry9527/EasySwapBackend/src/service/v1"
-	"github.com/falconry9527/EasySwapBackend/src/types/v1"
+	"EasySwapBackend/src/service/svc"
+	"EasySwapBackend/src/service/v1"
+	"EasySwapBackend/src/types/v1"
 )
 
 func CollectionItemsHandler(svcCtx *svc.ServerCtx) gin.HandlerFunc {

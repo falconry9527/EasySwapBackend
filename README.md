@@ -5,7 +5,7 @@
 ### 准备条件
 
 1. 确保将下面三个 repo 都pull同一个本地目录
-    - https://github.com/falconry9527/EasySwapBackend
+    - https://EasySwapBackend
     - https://github.com/falconry9527/EasySwapBase
     - https://github.com/falconry9527/EasySwapSync
     -- EasySwapBackend

@@ -6,7 +6,7 @@ import (
 	"github.com/falconry9527/EasySwapBase/stores/xkv"
 	"gorm.io/gorm"
 
-	"github.com/falconry9527/EasySwapBackend/src/dao"
+	"EasySwapBackend/src/dao"
 )
 
 type CtxConfig struct {

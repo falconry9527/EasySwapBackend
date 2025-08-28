@@ -6,7 +6,7 @@ import (
 	"github.com/falconry9527/EasySwapBase/stores/gdb/orderbookmodel/multi"
 	"github.com/pkg/errors"
 
-	"github.com/falconry9527/EasySwapBackend/src/types/v1"
+	"EasySwapBackend/src/types/v1"
 )
 
 // QueryItemTraits 查询单个NFT Item的 Trait信息

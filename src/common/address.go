@@ -5,7 +5,7 @@ import (
 	"github.com/falconry9527/EasySwapBase/evm/eip"
 	"github.com/pkg/errors"
 
-	"github.com/falconry9527/EasySwapBackend/src/common/utils"
+	"EasySwapBackend/src/common/utils"
 )
 
 func UnifyAddress(address string) (string, error) {
