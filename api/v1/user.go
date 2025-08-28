@@ -1,0 +1,74 @@
+package v1
+
+import (
+	"EasySwapBackend/service/svc"
+	"EasySwapBackend/service/v1"
+
+	"github.com/falconry9527/EasySwapBase/errcode"
+	"github.com/falconry9527/EasySwapBase/kit/validator"
+	"github.com/falconry9527/EasySwapBase/xhttp"
+	"github.com/gin-gonic/gin"
+
+	"EasySwapBackend/types/v1"
+)
+
+func UserLoginHandler(svcCtx *svc.ServerCtx) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		req := types.LoginReq{}
+		if err := c.BindJSON(&req); err != nil {
+			xhttp.Error(c, err)
+			return
+		}
+
+		if err := validator.Verify(&req); err != nil {
+			xhttp.Error(c, errcode.NewCustomErr(err.Error()))
+			return
+		}
+
+		res, err := service.UserLogin(c.Request.Context(), svcCtx, req)
+		if err != nil {
+			xhttp.Error(c, errcode.NewCustomErr(err.Error()))
+			return
+		}
+
+		xhttp.OkJson(c, types.UserLoginResp{
+			Result: res,
+		})
+	}
+}
+
+func GetLoginMessageHandler(svcCtx *svc.ServerCtx) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		address := c.Params.ByName("address")
+		if address == "" {
+			xhttp.Error(c, errcode.NewCustomErr("user addr is null"))
+			return
+		}
+
+		res, err := service.GetUserLoginMsg(c.Request.Context(), svcCtx, address)
+		if err != nil {
+			xhttp.Error(c, errcode.NewCustomErr(err.Error()))
+			return
+		}
+
+		xhttp.OkJson(c, res)
+	}
+}
+
+func GetSigStatusHandler(svcCtx *svc.ServerCtx) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		userAddr := c.Params.ByName("address")
+		if userAddr == "" {
+			xhttp.Error(c, errcode.NewCustomErr("user addr is null"))
+			return
+		}
+
+		res, err := service.GetSigStatusMsg(c.Request.Context(), svcCtx, userAddr)
+		if err != nil {
+			xhttp.Error(c, errcode.NewCustomErr(err.Error()))
+			return
+		}
+
+		xhttp.OkJson(c, res)
+	}
+}
