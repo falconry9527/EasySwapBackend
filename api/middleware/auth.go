@@ -106,6 +106,8 @@ func GetAuthUserAddress(c *gin.Context, ctx *xkv.Store) ([]string, error) {
 	return addrs, nil
 }
 
+// 解密
+// 加密方法: 用户登录的： AesEncryptOFB
 func AesDecryptOFB(data []byte, key []byte) ([]byte, error) {
 	block, _ := aes.NewCipher([]byte(key))
 	iv := data[:aes.BlockSize]
