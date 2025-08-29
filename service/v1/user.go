@@ -30,6 +30,16 @@ func getUserLoginTokenCacheKey(address string) string {
 	return middleware.CR_LOGIN_KEY + ":" + strings.ToLower(address)
 }
 
+// 把token写入redis
+// 1. getUserLoginTokenCacheKey 生成key
+// 2. CacheUserToken
+func CacheUserToken(svcCtx *svc.ServerCtx, tokenKey, token string) error {
+	if err := svcCtx.KvStore.Setex(tokenKey, token, 30*24*60*60); err != nil {
+		return err
+	}
+	return nil
+}
+
 func UserLogin(ctx context.Context, svcCtx *svc.ServerCtx, req types.LoginReq) (*types.UserLoginInfo, error) {
 	// 返回结果
 	res := types.UserLoginInfo{}
@@ -101,15 +111,6 @@ func UserLogin(ctx context.Context, svcCtx *svc.ServerCtx, req types.LoginReq) (
 	res.IsAllowed = user.IsAllowed
 
 	return &res, err
-}
-
-// 把token写入redis
-func CacheUserToken(svcCtx *svc.ServerCtx, tokenKey, token string) error {
-	if err := svcCtx.KvStore.Setex(tokenKey, token, 30*24*60*60); err != nil {
-		return err
-	}
-
-	return nil
 }
 
 func AesEncryptOFB(data []byte, key []byte) ([]byte, error) {

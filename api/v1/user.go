@@ -19,12 +19,12 @@ func UserLoginHandler(svcCtx *svc.ServerCtx) gin.HandlerFunc {
 			xhttp.Error(c, err)
 			return
 		}
-
+		// validator 验证参数的格式是否有误
 		if err := validator.Verify(&req); err != nil {
 			xhttp.Error(c, errcode.NewCustomErr(err.Error()))
 			return
 		}
-
+		// 用户登录逻辑
 		res, err := service.UserLogin(c.Request.Context(), svcCtx, req)
 		if err != nil {
 			xhttp.Error(c, errcode.NewCustomErr(err.Error()))

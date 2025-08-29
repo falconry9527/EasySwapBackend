@@ -2,12 +2,12 @@ module EasySwapBackend
 
 go 1.21
 
-//replace github.com/falconry9527/EasySwapBase => ../EasySwapBase
+replace github.com/falconry9527/EasySwapBase => ../EasySwapBase
 
 require (
 	github.com/anyswap/CrossChain-Bridge v0.3.9
 	github.com/ethereum/go-ethereum v1.12.0
-	github.com/falconry9527/EasySwapBase v1.0.1
+	github.com/falconry9527/EasySwapBase v0.0.0
 	github.com/gin-contrib/cors v1.3.1
 	github.com/gin-gonic/gin v1.9.1
 	github.com/go-playground/validator/v10 v10.15.0

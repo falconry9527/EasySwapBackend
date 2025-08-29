@@ -13,6 +13,10 @@ func loadV1(r *gin.Engine, svcCtx *svc.ServerCtx) {
 
 	user := apiV1.Group("/user")
 	{
+		// 登录和常规系统不同: 没有账户和密码
+		// 1. 生成login签名信息
+		// 2. 使用签名信息登录，获取token
+		// 3. 验证数据是否存入数据库
 		user.GET("/:address/login-message", v1.GetLoginMessageHandler(svcCtx)) // 生成login签名信息
 		user.POST("/login", v1.UserLoginHandler(svcCtx))                       // 登陆
 		user.GET("/:address/sig-status", v1.GetSigStatusHandler(svcCtx))       // 获取用户签名状态
